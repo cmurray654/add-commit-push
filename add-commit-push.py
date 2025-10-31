@@ -19,7 +19,7 @@ else:
 print ("git add -A")
 subprocess.run(["git", "add", "-A"])
 
-print ("git commit -m")
+print ("git commit -m " + Message )
 subprocess.run(["git", "commit", "-m",  Message])
 
 print ("git push")
