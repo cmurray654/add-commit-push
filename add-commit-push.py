@@ -3,6 +3,14 @@ import sys
 
 Message = "Update files."
 
+# Check if the user has a peramater of m for message
+if len(sys.argv) > 1 and sys.argv[1] == "-m":
+    if len(sys.argv) > 2:
+        Message = sys.argv[2]
+    else:
+        print("Error: No commit message provided after -m")
+        sys.exit(1)
+
 print ("Starting add-commit-push")
 print ("git status")
 subprocess.run(["git", "status"])
